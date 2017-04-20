@@ -66,6 +66,7 @@ class Bag extends engine.DisplayObjectContainer {
         this.switchButton.width = 100;
         this.switchButton.height = 25;
         this.addChild(this.switchButton);
+        this.switchButton.touchEnabled = true;
 
         this.switch.text = "打开背包";
         //this.switch.size = 14;

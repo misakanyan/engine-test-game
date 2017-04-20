@@ -204,6 +204,7 @@ class GameScene {
         stage.addChild(GameScene.chara);
         GameScene.chara.idle();
         GameScene.map.initEventListener(GameScene.chara);
+        GameScene.map.touchEnabled = true;
     }
 
     public static replaceScene(scene: GameScene) {

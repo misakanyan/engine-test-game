@@ -23,7 +23,7 @@ setTimeout(function() {
     var main= new Main(stage);
     stage.addChild(main);
     console.log("loaded")
-}, 5000);
+}, 1000);
 
 class Main extends engine.DisplayObjectContainer {
 

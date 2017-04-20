@@ -179,6 +179,7 @@ var Bag = (function (_super) {
         this.switchButton.width = 100;
         this.switchButton.height = 25;
         this.addChild(this.switchButton);
+        this.switchButton.touchEnabled = true;
         this.switch.text = "打开背包";
         //this.switch.size = 14;
         //this.switch.font = "微软雅黑";
@@ -391,6 +392,7 @@ var Character = (function (_super) {
                 count += 0.2;
                 if (count >= list.length) {
                     count = 0;
+                    console.log("chara pos: (" + _this._body.x + " , " + _this._body.y + ")");
                 }
                 _this._body.img.src = list[Math.floor(count)];
             }
@@ -816,7 +818,7 @@ setTimeout(function () {
     var main = new Main(stage);
     stage.addChild(main);
     console.log("loaded");
-}, 5000);
+}, 1000);
 var Main = (function (_super) {
     __extends(Main, _super);
     //public list = new CommandList();
@@ -1571,6 +1573,7 @@ var GameScene = (function () {
         stage.addChild(GameScene.chara);
         GameScene.chara.idle();
         GameScene.map.initEventListener(GameScene.chara);
+        GameScene.map.touchEnabled = true;
     }
     GameScene.replaceScene = function (scene) {
         GameScene.scene = scene;

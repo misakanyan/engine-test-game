@@ -135,6 +135,7 @@ class Character extends engine.DisplayObjectContainer {
                 count　+= 0.2;
                 if (count >= list.length) {
                     count = 0;
+                    console.log("chara pos: ("+ this._body.x + " , " + this._body.y + ")");
                 }
 
                 this._body.img.src = list[Math.floor(count)];
